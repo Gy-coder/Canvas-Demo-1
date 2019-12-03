@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="canvas"></div>
+    <script>
+      canvas.onclick = e => {
+        // console.log(e);
+        // console.log调试大法
+        console.log(e.clientX); //读取鼠标所在的x轴坐标
+        console.log(e.clientY); //读取鼠标所在的y轴坐标
+        let div = document.createElement("div"); //创建一个div
+        div.style.position = "absolute"; //绝对定位div
+        console.log(1);
+        div.style.left = e.clientX + "px"; //确定div的位置
+        div.style.top = e.clientY + "px"; //确定div的位置
+        // div.style.border = "1px solid red";
+        div.style.width = "6px";
+        div.style.height = "6px";
+        div.style.marginLeft = "-3px"; //让div落到鼠标指针上
+        div.style.marginTop = "-3px"; //让div落到鼠标指针上
+        div.style.borderRadius = "50%";
+        div.style.backgroundColor = "black";
+        // 以上为div的样式
+        canvas.append(div);
+        // 以上是画点的代码
+      };
+    </script>
+  </body>
+</html>
